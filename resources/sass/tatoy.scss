@@ -1,0 +1,107 @@
+// Color Variables
+$primary-color: #6a11cb;
+$secondary-color: #2575fc;
+$hover-color: #ffcc00;
+$bg-color: #f0f4f8;
+$feature-bg-color: #fff;
+$footer-bg-color: #333;
+$footer-text-color: #888;
+
+// Container Styling
+.tatoy-container {
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  background: $bg-color;
+  padding: 30px 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+// Header Section
+header {
+  margin-bottom: 40px;
+
+  h1 {
+    font-size: 3rem;
+    color: $primary-color;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+  }
+}
+
+// Features Section
+.features {
+  background: $feature-bg-color;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+
+  h2 {
+    font-size: 2rem;
+    color: $primary-color;
+    margin-bottom: 20px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      font-size: 1.1rem;
+      color: #333;
+      margin: 10px 0;
+      padding-left: 20px;
+      position: relative;
+
+      &::before {
+        content: '✔';
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: $secondary-color;
+      }
+    }
+  }
+}
+
+// Footer Section
+footer {
+  background: $footer-bg-color;
+  color: $footer-text-color;
+  padding: 20px;
+  margin-top: auto;
+
+  p {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
+// Responsive Design: Mobile view
+@media (max-width: 768px) {
+  .tatoy-container {
+    padding: 20px;
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  .features h2 {
+    font-size: 1.8rem;
+  }
+
+  .features ul li {
+    font-size: 1rem;
+  }
+}

@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/home', function () {
+    return view('home'); // Ensure home.blade.php exists
 });
+
+
+// Wildcard route for non-API routes
+Route::get('/{any?}', function () {
+    return view('welcome');
+})->where('any', '^(?!api).*');
